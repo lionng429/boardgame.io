@@ -10,11 +10,20 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Card } from '../src/client/lib/card/card';
+import { Grid } from '../src/client/lib/grid/grid';
 
 storiesOf('Card', module)
   .add('basic', () => (
     <div style={{ padding: '50px' }} >
     <Card onHover={action('onHover')}
           onClick={action('onClick')} />
+    </div>
+  ));
+
+
+storiesOf('Grid', module)
+  .add('basic', () => (
+    <div style={{ padding: '50px' }}>
+      <Grid />
     </div>
   ));
